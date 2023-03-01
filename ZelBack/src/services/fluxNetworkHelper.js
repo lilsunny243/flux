@@ -197,7 +197,7 @@ async function isPortOpen(ip, port, app, timeout = 5000) {
  */
 async function isFluxAvailable(ip, port = config.server.apiport) {
   try {
-    const ipchars = /^[1-9.]+$/;
+    const ipchars = /^[0-9.]+$/;
     if (!ipchars.test(ip)) {
       throw new Error('Invalid IP');
     }
